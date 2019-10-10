@@ -33,16 +33,16 @@ class Solution
 	public static void main(String args[]) throws Exception
 	{
 		int idx = 1;
-        val[1][1] = 1;
-        for (int i = 2; i < val.length; i++) {
-            for (int j = i; j < val.length; j += i)
-                val[j][0]++;
-            if (val[i][0] > val[idx][0])
-                idx = i;
-            else if (val[i][0] == val[idx][0])
-                idx = (i > idx) ? i : idx;
-            val[i][1] = idx;
-        }
+		val[1][1] = 1;
+		for (int i = 2; i < val.length; i++) {
+		    for (int j = i; j < val.length; j += i)
+			val[j][0]++;
+		    if (val[i][0] > val[idx][0])
+			idx = i;
+		    else if (val[i][0] == val[idx][0])
+			idx = (i > idx) ? i : idx;
+		    val[i][1] = idx;
+		}
 		
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
